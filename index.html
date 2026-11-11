@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#ffffff" />
+  <title>拉娃 LAWA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- 圖示（Figma 匯出以外的圖示，依設計稿風格繪製） -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+    <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 20 20"/></symbol>
+    <symbol id="i-sort" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3.5 17 9H7z"/><path d="M12 20.5 7 15h10z"/></symbol>
+    <symbol id="i-back" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m11 6-6 6 6 6"/></symbol>
+    <symbol id="i-caret-left" viewBox="0 0 10 10" fill="currentColor"><path d="M7.5 1.5v7L2 5z"/></symbol>
+    <symbol id="i-caret-right" viewBox="0 0 10 10" fill="currentColor"><path d="M2.5 1.5v7L8 5z"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 17V11a6 6 0 0 1 12 0v6l1.5 1.5h-15z"/><path d="M10 21a2.2 2.2 0 0 0 4 0"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 11.2V12a8.5 8.5 0 1 1-5.04-7.77"/><path d="m8.5 11.5 3 3 9-9"/></symbol>
+    <symbol id="i-warning" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 2.4 17.6A2 2 0 0 0 4.1 20.6h15.8a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9.5v4.5"/><path d="M12 17.4h.01"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4.5 20.5c1.4-3.7 4.2-5.5 7.5-5.5s6.1 1.8 7.5 5.5"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="10.5" width="14" height="10" rx="2.5"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-eye-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12z"/><circle cx="12" cy="12" r="3"/><path d="M3.5 3.5l17 17"/></symbol>
+    <symbol id="i-news" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="7" width="32" height="34" rx="4"/><path d="M15 16h18M15 23h18M15 30h10"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M24 40S7 30 7 18a9 9 0 0 1 17-4 9 9 0 0 1 17 4c0 12-17 22-17 22z"/><path d="M12 24h7l3-5 4 9 3-4h7"/></symbol>
+    <symbol id="i-pill" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="17" width="36" height="14" rx="7" transform="rotate(-45 24 24)"/><path d="m19 19 10 10"/></symbol>
+    <symbol id="i-cloud-off" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 36h20a8 8 0 0 0 2.5-15.6A12 12 0 0 0 14.3 17 9.5 9.5 0 0 0 14 36z"/><path d="m8 8 32 32"/></symbol>
+  </svg>
+
+  <div id="app">
+    <!-- ========== 歡迎頁 ========== -->
+    <section class="screen screen-auth" id="screen-welcome" hidden>
+      <div class="ring-bg" aria-hidden="true"></div>
+      <div class="auth-body">
+        <img class="auth-logo" src="assets/images/logo-lawa.svg" alt="拉娃 LAWA" />
+        <h1 class="auth-title">歡迎使用</h1>
+        <p class="auth-subtitle">請選擇登入方式以繼續使用</p>
+        <button type="button" class="btn-line" data-action="line-login">
+          <img src="assets/images/icon-line.svg" alt="使用LINE登入" />
+        </button>
+        <button type="button" class="btn btn-solid btn-lg" data-action="go-login">一般帳號登入</button>
+        <p class="auth-hint">尚未有帳號？使用 LINE 登入即可開始使用</p>
+      </div>
+    </section>
+
+    <!-- ========== 一般帳號登入 ========== -->
+    <section class="screen screen-auth" id="screen-login" hidden>
+      <div class="ring-bg" aria-hidden="true"></div>
+      <div class="auth-body">
+        <img class="auth-logo" src="assets/images/logo-lawa.svg" alt="拉娃 LAWA" />
+        <h1 class="auth-title">歡迎使用</h1>
+        <form class="login-form" id="login-form" novalidate>
+          <label class="field">
+            <svg class="field__icon" aria-hidden="true"><use href="#i-user"/></svg>
+            <input id="login-account" name="account" type="text" inputmode="email" autocomplete="username" placeholder="請輸入帳號" aria-label="帳號" />
+          </label>
+          <label class="field">
+            <svg class="field__icon" aria-hidden="true"><use href="#i-lock"/></svg>
+            <input id="login-password" name="password" type="password" autocomplete="current-password" placeholder="請輸入密碼" aria-label="密碼" />
+            <button type="button" class="field__toggle" data-action="toggle-password" aria-label="顯示密碼">
+              <svg aria-hidden="true"><use href="#i-eye-off"/></svg>
+            </button>
+          </label>
+          <p class="form-error" id="login-error" role="alert"></p>
+          <button type="submit" class="btn btn-solid btn-md">登入</button>
+          <button type="button" class="btn btn-outline btn-md" data-action="line-login">用LINE登入</button>
+          <button type="button" class="link-btn" data-action="forgot-password">忘記密碼?</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ========== 主畫面 ========== -->
+    <section class="screen screen-main" id="screen-main" hidden>
+      <header class="main-header" id="main-header">
+        <div class="ring-bg" aria-hidden="true"></div>
+        <div class="topbar">
+          <img class="topbar__logo" src="assets/images/logo-lawa.svg" alt="拉娃 LAWA" />
+          <div class="user-pill">
+            <img src="assets/images/icon-avatar.svg" alt="" aria-hidden="true" />
+            <span id="user-name"></span>
+          </div>
+        </div>
+
+        <nav class="tabs" id="tabs" role="tablist" aria-label="主選單">
+          <a class="tab" role="tab" href="#/announcements" data-tab="announcements">最新公告</a>
+          <a class="tab" role="tab" href="#/measurements" data-tab="measurements">每日生理量測</a>
+          <a class="tab" role="tab" href="#/medications" data-tab="medications">用藥提醒</a>
+        </nav>
+
+        <div class="back-row" id="back-row" hidden>
+          <button type="button" class="back-btn" data-action="back" aria-label="返回">
+            <svg aria-hidden="true"><use href="#i-back"/></svg>
+          </button>
+        </div>
+
+        <!-- 公告：搜尋與排序 -->
+        <div class="toolbar toolbar-news" id="toolbar-news" hidden>
+          <form class="search" id="search-form" role="search">
+            <svg class="search__icon" aria-hidden="true"><use href="#i-search"/></svg>
+            <input id="search-input" type="search" enterkeyhint="search" placeholder="" aria-label="搜尋公告" />
+          </form>
+          <button type="button" class="sort-btn" data-action="toggle-sort" aria-label="切換排序">
+            <svg aria-hidden="true"><use href="#i-sort"/></svg>
+            <span id="sort-label">最新</span>
+          </button>
+        </div>
+
+        <!-- 量測、用藥：日期列 -->
+        <div class="toolbar toolbar-date" id="toolbar-date" hidden>
+          <button type="button" class="date-pill date-pill--prev" data-action="date-prev">
+            <svg aria-hidden="true"><use href="#i-caret-left"/></svg><span id="date-prev-label"></span>
+          </button>
+          <div class="date-center">
+            <div class="date-full" id="date-full"></div>
+            <div class="date-label" id="date-label"></div>
+          </div>
+          <button type="button" class="date-pill date-pill--next" data-action="date-next">
+            <span id="date-next-label"></span><svg aria-hidden="true"><use href="#i-caret-right"/></svg>
+          </button>
+        </div>
+      </header>
+
+      <main class="main-content" id="content" aria-live="polite"></main>
+    </section>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="https://static.line-scdn.net/liff/edge/2/sdk.js" charset="utf-8"></script>
+  <script src="js/config.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/mock-data.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
